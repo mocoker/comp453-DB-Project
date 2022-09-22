@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h5 class="article-title">List of Blood Available Grouped by Blood Type</h5>
+	  {% for row in result %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              {{ row.Donor_Blood_Group }}&emsp;&emsp;&emsp;{{ row.Blood_Test_Conclusion }}&emsp;&emsp;&emsp;{{row.Inventory_Status}}&emsp;&emsp;&emsp;{{row.totCount}}
+            </div>
+
+          </div>
+        </article>
+     {% endfor %}
+
+{% endblock content %}

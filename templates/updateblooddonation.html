@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Update Blood Donation</legend>
+
+                <div class="form-group">
+                      {{ form.Donation_ID.label(class="form-control-label") }}
+                      {% if form.Donation_ID.errors %}
+                          {{ form.Donation_ID(class="form-control form-control-lg is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.Donation_ID.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.Donation_ID(class="form-control form-control-lg") }}
+                      {% endif %}
+                </div>
+
+                <div class="form-group">
+                      {{ form.Blood_Supply_ID.label(class="form-control-label") }}
+                      {% if form.Blood_Supply_ID.errors %}
+                          {{ form.Blood_Supply_ID(class="form-control form-control-lg is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.Blood_Supply_ID.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.Blood_Supply_ID(class="form-control form-control-lg") }}
+                      {% endif %}
+                </div>
+
+            </fieldset>
+
+<!--Submit button-->
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}

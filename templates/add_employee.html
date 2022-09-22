@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Add Employee to System</legend>
+
+                <div class="form-group">
+                      {{ form.Employee_Email.label(class="form-control-label") }}
+                      {% if form.Employee_Email.errors %}
+                          {{ form.Employee_Email(class="form-control form-control-lg is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.Employee_Email.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.Employee_Email(class="form-control form-control-lg") }}
+                      {% endif %}
+                </div>
+
+                <div class="form-group">
+                      {{ form.First_Name.label(class="form-control-label") }}
+                      {% if form.First_Name.errors %}
+                          {{ form.First_Name(class="form-control form-control-lg is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.First_Name.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.First_Name(class="form-control form-control-lg") }}
+                      {% endif %}
+                </div>
+
+                <div class="form-group">
+                      {{ form.Last_Name.label(class="form-control-label") }}
+                      {% if form.Last_Name.errors %}
+                          {{ form.Last_Name(class="form-control form-control-lg is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.Last_Name.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.Last_Name(class="form-control form-control-lg") }}
+                      {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.Employee_Address.label(class="form-control-label") }}
+                    {% if form.Employee_Address.errors %}
+                        {{ form.Employee_Address(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Employee_Address.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Employee_Address(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.Employee_Phone_Number.label(class="form-control-label") }}
+                    {% if form.Employee_Phone_Number.errors %}
+                        {{ form.Employee_Phone_Number(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Employee_Phone_Number.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Employee_Phone_Number(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.Employee_Designation.label(class="form-control-label") }}
+                    {% if form.Employee_Designation.errors %}
+                        {{ form.Employee_Designation(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Employee_Designation.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Employee_Designation(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+            </fieldset>
+
+<!--Submit button-->
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h5 class="article-title">List of Blood to be Disposed of Due to Test Failure</h5>
+	  {% for row in result %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              {{ row.Donation_ID }}&emsp;{{ row.Date_of_Donation }}&emsp;&emsp;{{row.Blood_Test_Conclusion}}&emsp;&emsp;{{row.Inventory_Status}}
+            </div>
+
+          </div>
+        </article>
+     {% endfor %}
+
+{% endblock content %}

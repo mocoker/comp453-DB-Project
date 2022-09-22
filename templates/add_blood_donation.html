@@ -1,0 +1,157 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Add Blood Donation to System</legend>
+
+                <div class="form-group">
+                      {{ form.Donor_Email.label(class="form-control-label") }}
+                      {% if form.Donor_Email.errors %}
+                          {{ form.Donor_Email(class="form-control form-control-lg is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.Donor_Email.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.Donor_Email(class="form-control form-control-lg") }}
+                      {% endif %}
+                </div>
+
+                <div class="form-group">
+                      {{ form.Date_of_Donation.label(class="form-control-label") }}
+                      {% if form.Date_of_Donation.errors %}
+                          {{ form.Date_of_Donation(class="form-control form-control-lg is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.Date_of_Donation.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.Date_of_Donation(class="form-control form-control-lg") }}
+                      {% endif %}
+                </div>
+
+                <div class="form-group">
+                      {{ form.Hepatitis_B.label(class="form-control-label") }}
+                      {% if form.Hepatitis_B.errors %}
+                          {{ form.Hepatitis_B(class="form-control form-control-lg is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.Hepatitis_B.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.Hepatitis_B(class="form-control form-control-lg") }}
+                      {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.Hepatitis_C.label(class="form-control-label") }}
+                    {% if form.Hepatitis_C.errors %}
+                        {{ form.Hepatitis_C(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Hepatitis_C.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Hepatitis_C(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.HIV.label(class="form-control-label") }}
+                    {% if form.HIV.errors %}
+                        {{ form.HIV(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.HIV.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.HIV(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.Syphilis.label(class="form-control-label") }}
+                    {% if form.Syphilis.errors %}
+                        {{ form.Syphilis(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Syphilis.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Syphilis(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.Zika_Virus.label(class="form-control-label") }}
+                    {% if form.Zika_Virus.errors %}
+                        {{ form.Zika_Virus(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Zika_Virus.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Zika_Virus(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.West_Nile_Virus.label(class="form-control-label") }}
+                    {% if form.West_Nile_Virus.errors %}
+                        {{ form.West_Nile_Virus(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.West_Nile_Virus.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.West_Nile_Virus(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.Blood_Test_Conclusion.label(class="form-control-label") }}
+                    {% if form.Blood_Test_Conclusion.errors %}
+                        {{ form.Blood_Test_Conclusion(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Blood_Test_Conclusion.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Blood_Test_Conclusion(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.Inventory_Status.label(class="form-control-label") }}
+                    {% if form.Inventory_Status.errors %}
+                        {{ form.Inventory_Status(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Inventory_Status.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Inventory_Status(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+            </fieldset>
+
+<!--Submit button-->
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h5 class="article-title">List of Blood Donations</h5>
+	  {% for row in result %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              {{ row.Donation_ID }}&emsp;&emsp;{{ row.First_Name }} - {{ row.Last_Name }}&emsp;&emsp;{{row.Donor_Blood_Group}}&emsp;&emsp;{{row.Blood_Test_Conclusion}}&emsp;&emsp;{{row.Blood_Supply_ID}}
+            </div>
+
+          </div>
+        </article>
+     {% endfor %}
+
+{% endblock content %}

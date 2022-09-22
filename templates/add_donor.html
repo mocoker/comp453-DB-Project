@@ -1,0 +1,143 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Add Blood Donor to System</legend>
+
+                <div class="form-group">
+                      {{ form.First_Name.label(class="form-control-label") }}
+                      {% if form.First_Name.errors %}
+                          {{ form.First_Name(class="form-control form-control-lg is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.First_Name.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.First_Name(class="form-control form-control-lg") }}
+                      {% endif %}
+                </div>
+
+                <div class="form-group">
+                      {{ form.Last_Name.label(class="form-control-label") }}
+                      {% if form.Last_Name.errors %}
+                          {{ form.Last_Name(class="form-control form-control-lg is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.Last_Name.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.Last_Name(class="form-control form-control-lg") }}
+                      {% endif %}
+                </div>
+
+                <div class="form-group">
+                      {{ form.Donor_Address.label(class="form-control-label") }}
+                      {% if form.Donor_Address.errors %}
+                          {{ form.Donor_Address(class="form-control form-control-lg is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.Donor_Address.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.Donor_Address(class="form-control form-control-lg") }}
+                      {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.Donor_Phone_Number.label(class="form-control-label") }}
+                    {% if form.Donor_Phone_Number.errors %}
+                        {{ form.Donor_Phone_Number(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Donor_Phone_Number.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Donor_Phone_Number(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.Donor_Email.label(class="form-control-label") }}
+                    {% if form.Donor_Email.errors %}
+                        {{ form.Donor_Email(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Donor_Email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Donor_Email(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.Donor_Blood_Group.label(class="form-control-label") }}
+                    {% if form.Donor_Blood_Group.errors %}
+                        {{ form.Donor_Blood_Group(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Donor_Blood_Group.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Donor_Blood_Group(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.Donor_Medical_Report.label(class="form-control-label") }}
+                    {% if form.Donor_Medical_Report.errors %}
+                        {{ form.Donor_Medical_Report(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Donor_Medical_Report.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Donor_Medical_Report(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.Sex.label(class="form-control-label") }}
+                    {% if form.Sex.errors %}
+                        {{ form.Sex(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Sex.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Sex(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.Birth_Date.label(class="form-control-label") }}
+                    {% if form.Birth_Date.errors %}
+                        {{ form.Birth_Date(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Birth_Date.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Birth_Date(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+            </fieldset>
+
+<!--Submit button-->
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Add Supply Record to System</legend>
+
+                <div class="form-group">
+                      {{ form.Health_Facility_Name.label(class="form-control-label") }}
+                      {% if form.Health_Facility_Name.errors %}
+                          {{ form.Health_Facility_Name(class="form-control form-control-lg is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.Health_Facility_Name.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.Health_Facility_Name(class="form-control form-control-lg") }}
+                      {% endif %}
+                </div>
+
+                <div class="form-group">
+                      {{ form.Blood_Group.label(class="form-control-label") }}
+                      {% if form.Blood_Group.errors %}
+                          {{ form.Blood_Group(class="form-control form-control-lg is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.Blood_Group.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.Blood_Group(class="form-control form-control-lg") }}
+                      {% endif %}
+                </div>
+
+                <div class="form-group">
+                      {{ form.Quantity_Supplied.label(class="form-control-label") }}
+                      {% if form.Quantity_Supplied.errors %}
+                          {{ form.Quantity_Supplied(class="form-control form-control-lg is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.Quantity_Supplied.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.Quantity_Supplied(class="form-control form-control-lg") }}
+                      {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.Date_of_Supply.label(class="form-control-label") }}
+                    {% if form.Date_of_Supply.errors %}
+                        {{ form.Date_of_Supply(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Date_of_Supply.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Date_of_Supply(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+            </fieldset>
+
+<!--Submit button-->
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}
